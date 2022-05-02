@@ -25,7 +25,6 @@ l = let
 
 ```
 
-
 ```zsh
     npm create vite@latest
         > react
@@ -65,6 +64,7 @@ file /package.json
         "preview": "vite preview"
       },
       "dependencies": {
+        "@headlessui/react": "^1.6.0",
         "react": "^18.0.0",
         "react-dom": "^18.0.0"
       },
@@ -72,6 +72,9 @@ file /package.json
         "@types/react": "^18.0.0",
         "@types/react-dom": "^18.0.0",
         "@vitejs/plugin-react": "^1.3.0",
+        "autoprefixer": "^10.4.7",
+        "postcss": "^8.4.13",
+        "tailwindcss": "^3.0.24",
         "typescript": "^4.6.3",
         "vite": "^2.9.5"
       }
@@ -110,7 +113,7 @@ exp func App
 
 /src/main.tsx
 
-```jsx
+```tsx
 imp React f 'react'
 imp ReactDom f 'react-dom/client'
 imp {App} f './App'
@@ -163,7 +166,6 @@ module.export = {
 
 /src/components/Widget.jsx
 
-
 ```jsx
 imp {ChatTeardropDots} f 'phosphor-react'
 imp {Popover} f '@headlessui/react'
@@ -173,8 +175,6 @@ exp func Widget()
     Popover."absolute bottom-5 right-5"
 
       Popover.Panel = Hello world
-
-      { isWidgetOpen && foo }
 
       Popover.Button."bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group"
         ChatTeardropDots."w-6 h-6"
